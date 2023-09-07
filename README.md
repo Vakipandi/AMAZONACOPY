@@ -14,7 +14,7 @@
     1. pnpm i react-router-dom
     2. create route for home screen
     3. create router for product screen 
-7. Crete Node.JS Server
+7. Create Node.JS Server
     1. run pnpm init in root folder
     2. update package.json set type:module
     3. add .js to imports
@@ -27,3 +27,9 @@
     10. create route for api/products
     11. return prodcuts
     12. pnpm run dev
+8. Fetch Products From Backend
+    1. set proxy in package.json
+    2. pnpm i axios
+    3. use state hook
+    4. use effect hook
+    5. use reducer hook
