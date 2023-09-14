@@ -9,11 +9,12 @@ import Badge from 'react-bootstrap/esm/Badge';
 import { useContext } from 'react';
 import { Store } from './Store';
 import CartScreen from './screens/CartScreen';
-import SingInScreen from './screens/SingInScreen';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
+import SignInScreen from './screens/SignInScreen';
+import SignUpScreen from './screens/SignUpScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -56,15 +57,15 @@ function App() {
                       <NavDropdown.Divider />
                       <Link
                         className="dropdown-item"
-                        to="#singout"
+                        to="#signout"
                         onClick={signoutHandler}
                       >
-                        Sing Out
+                        Sign Out
                       </Link>
                     </NavDropdown>
                   ) : (
                     <Link to="/singin" className="nav-link">
-                      Sing In
+                      Sign In
                     </Link>
                   )}
                 </Nav>
@@ -76,7 +77,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomeScreen />} />
                 <Route path="/cart" element={<CartScreen />} />
-                <Route path="/:singin" element={<SingInScreen />} />
+                <Route path="/:signin" element={<SignInScreen />} />
+                <Route path="/signup" element={<SignUpScreen />} />
                 <Route
                   path="/shipping"
                   element={<ShippingAddressScreen />}
