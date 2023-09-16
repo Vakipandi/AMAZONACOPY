@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import seedRouter from './routes/seed.routes.js';
 import productRouter from './routes/product.routes.js';
 import userRouter from './routes/user.routes.js';
+import orderRouter from './routes/order.routes.js';
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.use(cors());
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
+app.use('/api/orders', orderRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
