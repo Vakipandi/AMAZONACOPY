@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "cd backend && pnpm install && cd ../frontend && pnpm install && pnpm run build",
-    "start" : "node backend/server.js",
+    "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
