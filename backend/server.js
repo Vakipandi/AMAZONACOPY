@@ -38,10 +38,10 @@ app.use('/api/orders', orderRouter);
 
 
 const _dirname = path.resolve();
-app.use(express.static(path.join(_dirname, '../frontend/dist')));
+app.use(express.static(path.join(_dirname, '/frontend/dist')));
 
 app.get('*', (req, res) =>
-  res.sendFile(path.join(_dirname, '../frontend/dist/index.html'))
+  res.sendFile(path.join(_dirname, '/frontend/dist/index.html'))
 );
 
 app.use((err, req, res, next) => {
