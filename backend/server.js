@@ -1,5 +1,4 @@
 import express from 'express';
-import path from 'path';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -7,6 +6,7 @@ import seedRouter from './routes/seed.routes.js';
 import productRouter from './routes/product.routes.js';
 import userRouter from './routes/user.routes.js';
 import orderRouter from './routes/order.routes.js';
+import path from 'path';
 
 dotenv.config();
 
@@ -35,8 +35,10 @@ app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
 
+
+
 const _dirname = path.resolve();
-console.log(_dirname,'../frontend/dist' );
+console.log(_dirname, '../frontend/dist');
 app.use(express.static(path.join(_dirname, '../frontend/dist')));
 
 app.get('*', (req, res) =>
