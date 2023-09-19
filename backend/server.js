@@ -24,8 +24,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: 'https://mern-amazon-app-tzxl.onrender.com/',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: 'https://mern-amazon-app-tzxl.onrender.com',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   })

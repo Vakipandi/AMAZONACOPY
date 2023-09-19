@@ -31,7 +31,7 @@ function SignUpScreen() {
     }
     try {
       const { data } = await axios.post(
-        'http://localhost:5000/api/users/signup',
+        'https://mern-amazon-app-tzxl.onrender.com/api/users/signup',
         {
           name,
           email,

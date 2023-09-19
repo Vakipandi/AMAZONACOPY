@@ -50,7 +50,7 @@ function PlaceOrderScreen() {
       dispatch({ type: 'CREATE_REQUEST' });
 
       const { data } = await axios.post(
-        'http://localhost:5000/api/orders',
+        'https://mern-amazon-app-tzxl.onrender.com/api/orders',
         {
           orderItems: cart.cartItems,
           shippingAddress: cart.shippingAddress,

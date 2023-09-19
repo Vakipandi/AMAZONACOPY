@@ -59,7 +59,7 @@ function ProductScreen() {
     const existItem = cart.cartItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(
-      `http://localhost:5000/api/products/${product._id}`
+      `https://mern-amazon-app-tzxl.onrender.com/api/products/${product._id}`
     );
     if (data.countInStock < quantity) {
       window.alert('Sorry. Product is out of stock');

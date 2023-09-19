@@ -25,7 +25,7 @@ function SignInScreen() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        'http://localhost:5000/api/users/signin',
+        'https://mern-amazon-app-tzxl.onrender.com/api/users/signin',
         {
           email,
           password,

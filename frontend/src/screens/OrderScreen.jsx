@@ -74,7 +74,7 @@ function OrderScreen() {
       try {
         dispatch({ type: 'PAY_REQUEST' });
         const { data } = await axios.put(
-          `http://localhost:5000/api/orders/${order._id}/pay`,
+          `https://mern-amazon-app-tzxl.onrender.com/api/orders/${order._id}/pay`,
           details,
           {
             headers: { Authorization: `Bearer ${userInfo.token}` },
