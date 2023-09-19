@@ -30,12 +30,12 @@ app.get('/api/keys/paypal', (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
 });
 
+app.use(cors({ origin: 'http://localhost:5000' }));
+
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
-
-
 
 const _dirname = path.resolve();
 app.use(express.static(path.join(_dirname, '/frontend/dist')));
