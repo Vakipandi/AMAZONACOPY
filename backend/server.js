@@ -30,8 +30,6 @@ app.get('/api/keys/paypal', (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
 });
 
-
-
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
@@ -48,6 +46,6 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server started at http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port http://localhost:${PORT}`);
 });
