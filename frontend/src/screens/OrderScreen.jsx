@@ -99,7 +99,7 @@ function OrderScreen() {
       try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { data } = await axios.get(
-          `http://localhost:5000/api/orders/${orderId}`,
+          `https://mern-amazon-app-tzxl.onrender.com/api/orders/${orderId}`,
           {
             headers: { Authorization: `Bearer ${userInfo.token}` },
           }
@@ -120,7 +120,7 @@ function OrderScreen() {
     } else {
       const loadPayPalScript = async () => {
         const { data: clientId } = await axios.get(
-          'http://localhost:5000/api/keys/paypal',
+          'https://mern-amazon-app-tzxl.onrender.com/api/keys/paypal',
           {
             headers: { Authorization: `Bearer ${userInfo.token}` },
           }
