@@ -1,3 +1,5 @@
+# Publish on : https://mern-amazon-app-tzxl.onrender.com
+
 # MERN AMAZONA
 
 # Lessons
@@ -136,11 +138,10 @@
     2. show user information
     3. create user update api
     4. update user info
-33. Publish To Heroku
+33. Publish To Render
     1. create and config node project
     2. serve build folder in frontend folder
-    3. create heroku account
+    3. create render acpount
     4. connect it to github
-    5. create mongodb atlas database
-    6. set database connection in heroku env variables
+    6. set database connection in render env variables
     7. commit and push
